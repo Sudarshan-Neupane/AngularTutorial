@@ -2,19 +2,23 @@
     "records":[
         {
             "Name":"sudarshan",
+            "fav_color":"blue",
             "age": 25
         },
         {
             "Name":"Binod",
-            "age": 25
+            "age": 25,
+            "fav_color":"red"
         },
         {
             "Name":"Asmita",
-            "age": 19
+            "age": 19,
+            "fav_color":"green"
         },
         {
             "Name":"Sujana",
-            "age": 19
+            "age": 19,
+            "fav_color":"blue"
         }
     ]
 }
