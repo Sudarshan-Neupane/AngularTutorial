@@ -11,7 +11,7 @@ app.config(function ($routeProvider) {
                 resolve:{
                    "check":function($location,$rootScope){
                        if(!$rootScope.loggedIn){
-                           $location.path('/login')
+                           $location.path('/dashboard.html')
                        }else{
                          template: 'welcome another user'   
                        }
@@ -31,6 +31,9 @@ app.controller('loginCtrl', function ($scope, $location,$rootScope) {
         if ($scope.username == 'admin' && $scope.password == 'admin') {
             $rootScope.loggedIn = true;
             $location.path('/dashboard');
+        }
+        else{
+            alert("wrong stuff");
         }
     };
 });
