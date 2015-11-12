@@ -1,0 +1,20 @@
+{
+    "records":[
+        {
+            "Name":"sudarshan",
+            "age": 25
+        },
+        {
+            "Name":"Binod",
+            "age": 25
+        },
+        {
+            "Name":"Asmita",
+            "age": 19
+        },
+        {
+            "Name":"Sujana",
+            "age": 19
+        }
+    ]
+}
