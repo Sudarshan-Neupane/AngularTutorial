@@ -1,0 +1,52 @@
+<html ng-app="myLanguageApp">
+    <head>
+        <title>Angular JS Includes</title>
+
+        <style>
+            table, th , td {
+                border: 1px solid grey;
+                border-collapse: collapse;
+                padding: 5px;
+            }
+
+            table tr:nth-child(odd) {
+                background-color: #f2f2f2;
+            }
+
+            table tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+        </style>
+        <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+
+    </head>
+    <body>
+        <div>Angular JS Application </div>
+        <div ng-controller="languages">
+            Select your favourite Languages 
+            <button ng-click="php()">php</button>
+            <button ng-click="java()">Java</button>
+            <button ng-click="css()">CSS</button>
+            <p>You  have selected {{ myFavLanguage}}</p>
+        </div>
+        <div ng-include="'ngInclude.html'">
+            
+        </div>
+        <script>
+            var application = angular.module('myLanguageApp',[]);
+            application.controller('languages',function($scope){
+               $scope.myFavLanguage ='None'; 
+               $scope.php = function(){
+                   $scope.myFavLanguage='PHP';
+               }
+               $scope.java = function(){
+                   $scope.myFavLanguage ='JAVA';
+               }
+               $scope.css =function(){
+                   $scope.myFavLanguage ='CSS';
+               }
+            });
+        </script>
+
+    </body>
+</html>
