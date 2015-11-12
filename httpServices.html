@@ -9,9 +9,10 @@
     </head>
     <body>
         <div ng-controller="peopleCtrl">
+            <input type="text" ng-model="searchBox">
             <ul><h2> Name and age of programmer in Vastika </h2>
                 
-                <li ng-repeat="person in persons">
+                <li ng-repeat="person in persons |filter:searchBox">
                     {{ person.Name+ " : "+ person.age }}
                 </li>
             </ul>
