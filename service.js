@@ -10,6 +10,7 @@ app.service('random',function(){
 app.controller('app1',function($scope,random){
     $scope.generateRandom = function(){
         $scope.randomNumber = random.generate();
+        $scope.randomNumber1 = random.generate();
     }
 })
 
