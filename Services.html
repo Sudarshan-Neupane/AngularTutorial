@@ -1,0 +1,19 @@
+<html ng-app="application">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+        <script src="service.js"></script>
+    </head>
+    <body>
+        <div ng-controller="app1">
+            <button ng-click="generateRandom()">
+                Generate Random number
+            </button>
+            <br>
+            {{ randomNumber }}
+        </div>
+    </body>
+</html>

@@ -5,5 +5,13 @@ app.controller('peopleCtrl',function($scope,$http){
               $scope.persons = response.records;  
     })
 });
+app.controller('randomController',function($scope){
+    $scope.myRandomNumber = Math.random();
+//    document.querySelectory('input').addEventListener('click',function(){
+//        console.log('button clicked');
+//        $scope.myRandomNumber =Math.random();
+//        $scope.$digest();
+//    },false)
+});
 
 

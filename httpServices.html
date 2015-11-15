@@ -13,7 +13,7 @@
             <ul><h2> Name and age of programmer in Vastika </h2>
                 
                 <li ng-repeat="person in persons |filter:searchBox">
-                    {{ person.Name+ " : "+ person.age +" : "+ person.fav_color }}
+                    {{ $index+1 +" :"+person.Name+ " : "+ person.age +" : "+ person.fav_color }}
                 </li>
             </ul>
         </div>
@@ -21,6 +21,14 @@
         Name <input type="text" ng-model="searchBox.Name"><br>
          Age <input type="text" ng-model="searchBox.age"><br>
           Fav-Color <input type="text" ng-model="searchBox.fav_color"><br>
-        
+          <hr>
+          <br>
+          <div ng-controller="randomController">
+              <span>
+                  {{ myRandomNumber }}
+              </span>
+              
+              <input type="button" value="Create New Button"/>
+          </div>
     </body>
 </html>
