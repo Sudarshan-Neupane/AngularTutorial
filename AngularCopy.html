@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script>
+            var app= angular.module('AngularJsCopy',[]);
+            app.controller('ExampleController',['$scope',function($scope){
+                    $scope.copyData = {};
+                    $scope.update = function(userData){
+                        $scope.copyData = angular.copy(userData);
+                    };
+                    $scope.reset = function(){
+                        angular.copy($scope.copyData,$scope.userData)
+                    };
+           
+            $scope.reset();
+            } 
+        ]);
+        </script>
+    </head>
+    <body ng-app="AngularJsCopy">
+        <div ng-controller="ExampleController">
+            <form novalidate="">
+               
+                <p> Name:<input type="text" ng-model="userData.name"/></p>
+                <p>Location <input type="text" ng-model="userData.location"/></p>
+                <p>Email : <input type="text" ng-model="userData.email"/></p>
+                <p><button ng-click="reset()">Reset</button></p>
+                <button ng-click="update(userData)">Save</button>
+            </form>
+            <pre>
+                Input Data={{ userData | json }}
+            </pre>
+            <pre>Copied Data = {{copyData | json}}</pre>
+        </div>
+        
+    </body>
+</html>
